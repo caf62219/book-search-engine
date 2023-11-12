@@ -1,5 +1,6 @@
-const typeDefs = 
-    `type Book{
+
+const typeDefs = `
+    type Book{
         authors: [String]   
         description: String!
         bookId: String!
@@ -20,6 +21,9 @@ const typeDefs =
     }
     type Query{
         me: User
+        users: [User]
+        books: [Book]
+        book(bookId: String!): Book
     }
     type Mutation{
         login(email: String!, password: String!): Auth
@@ -27,4 +31,6 @@ const typeDefs =
         saveBook(authors: [String], description: String!, bookId: String!, image: String, link: String, title: String!): User
         removeBook(bookId: String!): User
     }
-    `; 
+    `;
+
+module.exports = typeDefs;

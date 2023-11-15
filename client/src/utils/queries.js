@@ -1,3 +1,4 @@
+// Purpose: to export the GET_ME query and the searchGoogleBooks function
 import { gql } from '@apollo/client';
 
 export const GET_ME = gql`
